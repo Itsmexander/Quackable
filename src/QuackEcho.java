@@ -1,15 +1,15 @@
-public class QuackEcho implements Quackable{
+public class QuackEcho implements Quackable {
 
-    Quackable duck;
+    private Quackable duck;
 
-    public QuackEcho(Quackable duck){
-        this.duck=duck;
+    public QuackEcho (Quackable duck){
+        this.duck = duck;
     }
 
+    @Override
     public void quack() {
         duck.quack();
-        System.out.println("Echo : \n");
+        System.out.printf("Echo:");
         duck.quack();
-        System.out.println("\n");
     }
 }
